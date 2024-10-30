@@ -15,7 +15,7 @@ import { SvgIcon } from './SvgIcon'
  * 顶部导航
  */
 const Nav = props => {
-  const { navBarTitle, fullWidth, siteInfo } = props
+  const { post, fullWidth, siteInfo } = props
   const autoCollapseNavBar = siteConfig(
     'NOBELIUM_AUTO_COLLAPSE_NAV_BAR',
     true,
@@ -67,9 +67,9 @@ const Nav = props => {
               )}
             </div>
           </Link>
-          {navBarTitle ? (
+          {post ? (
             <p className='ml-2 font-medium text-gray-800 dark:text-gray-300 header-name'>
-              {navBarTitle}
+              {post?.title}
             </p>
           ) : (
             <p className='logo ml-2 font-medium text-gray-800 dark:text-gray-300 header-name whitespace-nowrap'>
